@@ -13,8 +13,10 @@ change temapltes/* to templates/en,sp,cn/*
 def home():
     if len(request.args) > 0:
         if request.args["lang"]=="cn":
+            print "returned cn"
             return render_template("index_cn.html")
         elif request.args["lang"]=="sp":
+            print "returned sp"
             return render_template("index_sp.html")
     return render_template("index_en.html")
 

@@ -1,12 +1,11 @@
 
 under route: 
       form's lang["?"] = X, 
-if en
-render template BASE_EN.html
-if sp
-render template BASE_SP.html
-if cn
-render template BASE_CN.html
+fix the rest of the translated routes
 
-rename current html files to X_EN
-make copies of _SP and _CN
+fix the rest of the links to translated routes
+
+make the "change language" links understand what page it is on.
+
+make the "change language" links appear depending on what lang it is now (en -> spcn, cn->ensp, sp->encn)
+
