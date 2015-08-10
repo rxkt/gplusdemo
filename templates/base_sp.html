@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>
+      GPLUS TUTORING
+    </title>
+    <!--css base-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    
+    <!-- force setting li height due to issues-->
+    <style>
+      .pure-menu-item{height:34px;}
+    </style>
+  </head>
+  
+  
+  <body bgcolor="#d0d0ff">
+    <center>
+      <h1>Welcome to GPlusTutoring's website!</h1>
+      <br>
+      <div class="pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list">
+          <li class="pure-menu-item"><a href="/home" class="pure-button">Home</a></li>
+          <li class="pure-menu-item"><a href="/details" class="pure-button">Details</a></li>
+          <li class="pure-menu-item"><a href="/contact" class="pure-button">Contact Us</a></li>
+          <li class="pure-menu-item"><a href="/location" class="pure-button">Location</a></li>
+          <li class="pure-menu-item">
+            <form method="GET" action="./">
+              <!-- have this route to same page, pull chinese elements if form["lang"]=="cn"-->
+              <button class="pure-button" type="submit" name="lang" value="cn">中文</button>
+            </form>
+          </li>
+          <li class="pure-menu-item">
+            <form method="GET" action="./">
+              <button class="pure-button" type="submit" name="lang" value="sp">Español</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </center>
+    <br>
+    {% block text %}
+    
+    {% endblock %}
+  </body>
+  
+  
+</html>
