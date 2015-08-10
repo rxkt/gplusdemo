@@ -15,7 +15,7 @@ def details():
 def contact():
     return render_templates("contact.html")
 
-@app.route("location")
+@app.route("/location")
 def location():
     return render_template("location.html")
     
