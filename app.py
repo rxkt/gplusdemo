@@ -2,6 +2,12 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+'''
+plans:
+change temapltes/* to templates/en,sp,cn/*
+
+'''
+
 @app.route("/home",methods=['GET'])
 @app.route("/",methods=['GET'])
 def home():
