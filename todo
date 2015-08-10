@@ -1,0 +1,12 @@
+
+under route: 
+      form's lang["?"] = X, 
+if en
+render template BASE_EN.html
+if sp
+render template BASE_SP.html
+if cn
+render template BASE_CN.html
+
+rename current html files to X_EN
+make copies of _SP and _CN
