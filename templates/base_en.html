@@ -10,6 +10,7 @@
     <style>
       .pure-menu-item{height:34px;}
     </style>
+    <script src="static/lib/jquery-1.11.3.min.js"></script>
   </head>
   
   
@@ -17,31 +18,35 @@
     <center>
       <h1>Welcome to GPlusTutoring's website!</h1>
       <br>
-      <div class="pure-menu pure-menu-horizontal">
+      <div class="pure-menu pure-menu-horizontal" style="background-color:#e4e4e4;width:70%;">
         <ul class="pure-menu-list">
           <li class="pure-menu-item"><a href="/home" class="pure-button">Home</a></li>
           <li class="pure-menu-item"><a href="/details" class="pure-button">Details</a></li>
           <li class="pure-menu-item"><a href="/contact" class="pure-button">Contact Us</a></li>
           <li class="pure-menu-item"><a href="/location" class="pure-button">Location</a></li>
           <li class="pure-menu-item">
-            <form method="GET" action="./">
+            <form method="GET" action="./" id="form1">
               <!-- have this route to same page, pull chinese elements if form["lang"]=="cn"-->
               <button class="pure-button" type="submit" name="lang" value="cn">中文</button>
             </form>
           </li>
           <li class="pure-menu-item">
-            <form method="GET" action="./">
+            <form method="GET" id="form2" action="./">
               <button class="pure-button" type="submit" name="lang" value="sp">Español</button>
             </form>
           </li>
         </ul>
       </div>
-    </center>
-    <br>
-    {% block text %}
     
-    {% endblock %}
+    <br>
+    </center>
+    <div style="margin: 0 auto;background-color:white;width:70%;">
+      {% block text %}
+      
+      {% endblock %}
+    </div>
+    
   </body>
-  
+  <script type="text/javascript" src="static/script.js"></script>
   
 </html>
