@@ -31,7 +31,9 @@ def contact():
 @app.route("/location",methods=['GET'])
 def location():
     return render_template("location_en.html")
-    
+@app.route("/media",methods=["get"])
+def media():
+    return render_template("media.html")
     
     
 if __name__ == "__main__":
