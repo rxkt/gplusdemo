@@ -22,14 +22,23 @@ def home():
 
 @app.route("/details",methods=['GET'])
 def details():
+    if len(request.args) > 0:
+        if request.args["lang"]=="cn":
+            return render_template("details_cn.html")
     return render_template("details_en.html")
 
 @app.route("/contact",methods=['GET'])
 def contact():
+    if len(request.args) > 0:
+        if request.args["lang"]=="cn":
+            return render_template("contact_cn.html")
     return render_template("contact_en.html")
 
 @app.route("/location",methods=['GET'])
 def location():
+    if len(request.args) > 0:
+        if request.args["lang"]=="cn":
+            return render_template("location_cn.html")
     return render_template("location_en.html")
 @app.route("/media",methods=["get"])
 def media():
