@@ -42,7 +42,10 @@ def location():
     return render_template("location_en.html")
 @app.route("/media",methods=["get"])
 def media():
-    return render_template("media.html")
+    if len(request.args) > 0:
+        if request.args["lang"]=="cn":
+            return render_template("media_cn.html")
+    return render_template("media_en.html")
     
     
 if __name__ == "__main__":
